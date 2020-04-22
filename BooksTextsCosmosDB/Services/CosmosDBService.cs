@@ -41,7 +41,6 @@ namespace BooksTextsCosmosDB.Services
             {
                 return null;
             }
-
         }
 
         public async Task<IEnumerable<Item>> GetItemsAsync(string queryString)
