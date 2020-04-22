@@ -31,7 +31,7 @@ namespace BooksTextsCosmosDB.Controllers
         [HttpPost]
         [ActionName("Create")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> CreateAsync([Bind("Id,Name,Description,Completed")] Item item)
+        public async Task<ActionResult> CreateAsync([Bind("SentenceId,Id,LanguageId,Name,Description,SentenceText,Completed")] Item item)
         {
             if (ModelState.IsValid)
             {
@@ -46,7 +46,7 @@ namespace BooksTextsCosmosDB.Controllers
         [HttpPost]
         [ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> EditAsync([Bind("Id,Name,Description,Completed")] Item item)
+        public async Task<ActionResult> EditAsync([Bind("SentenceId,Id,LanguageId,Name,Description,SentenceText,Completed")] Item item)
         {
             if (ModelState.IsValid)
             {
